@@ -3,10 +3,10 @@
     <div>
         <form id="order-form">
             <h3>Сделать заказ</h3>
-            <input name="DATA[NAME]" type="text" placeholder="Имя*"/>
-            <input id="client-phone" name="DATA[PHONE]" type="text" placeholder="Телефон*"/>
+            <input name="DATA[NAME]" type="text" placeholder="Имя*" required/>
+            <input id="client-phone" name="DATA[PHONE]" type="text" placeholder="Телефон*" required/>
             <p><div id="person-drop-box">Набор для  <select name="DATA[TITLE]">
-                <option value="1-person">1 человека</option>
+                <option value="1-person" selected="selected">1 человека</option>
                 <option value="2-person"> 2 человек</option>
                 <option value="3-person"> 3 человек</option>
                 <option value="4-person"> 4 человек</option>
@@ -54,6 +54,16 @@
     }
     #person-drop-box select{
         border: none;
+        cursor: pointer;
+    }
+    table.dish-info{
+        margin-left: auto;
+        margin-right: auto;
+        border: 2px solid #eee;
+        background: #f9f5ed;
+    }
+    .dish-info td{
+        text-align: center;
     }
 </style>
 <p style="display: none;">
@@ -80,9 +90,12 @@
         class="aligncenter size-full wp-image-18"
         src="http://cook-book.byethost5.com/wp-content/uploads/2016/02/IMG_3260-1024.jpg"
         alt="Гречка с жареными куриными грудками" width="1024" height="683"/></a>
-<p style="text-align: center;">Вес: 475 г</p>
-<p style="text-align: center;">Калорийность на 100 гр: 214 ккал</p>
-<p style="text-align: center;">Время готовки: 35 минут</p>
+<table class="dish-info">
+    <thead>
+    <tr><th>Вес</th><th>Калорийность на 100 г</th><th>Время приготовления</th></tr>
+    </thead>
+    <tr><td>475 г</td><td>214 ккал</td><td>35 минут</td></tr>
+</table>
 
 
 <hr/>
@@ -92,9 +105,12 @@
         class="aligncenter size-full wp-image-21"
         src="http://cook-book.byethost5.com/wp-content/uploads/2016/02/IMG_3093-1024.jpg" alt="Спагетти Карбонара"
         width="1024" height="665"/></a>
-<p style="text-align: center;">Вес: 425 г</p>
-<p style="text-align: center;">Калорийность на 100 гр: 388 ккал</p>
-<p style="text-align: center;">Время готовки: 35 минут</p>
+<table class="dish-info">
+    <thead>
+    <tr><th>Вес</th><th>Калорийность на 100 г</th><th>Время приготовления</th></tr>
+    </thead>
+    <tr><td>425 г</td><td>388 ккал</td><td>35 минут</td></tr>
+</table>
 
 
 <hr/>
@@ -104,9 +120,12 @@
         class="aligncenter size-full wp-image-38"
         src="http://cook-book.byethost5.com/wp-content/uploads/2016/02/IMG_3339-1024.jpg" alt="Картофельное жаркое"
         width="1024" height="683"/></a>
-<p style="text-align: center;">Вес: 700 г</p>
-<p style="text-align: center;">Калорийность на 100 гр: 105 ккал</p>
-<p style="text-align: center;">Время готовки: 40 минут</p>
+<table class="dish-info">
+    <thead>
+    <tr><th>Вес</th><th>Калорийность на 100 г</th><th>Время приготовления</th></tr>
+    </thead>
+    <tr><td>700 г</td><td>105 ккал</td><td>40 минут</td></tr>
+</table>
 
 
 <hr/>
@@ -116,9 +135,12 @@
         class="aligncenter size-full wp-image-39"
         src="http://cook-book.byethost5.com/wp-content/uploads/2016/02/IMG_3358-1024.jpg"
         alt="Картофельное пюре с филе индейки в панировке" width="1024" height="683"/></a>
-<p style="text-align: center;">Вес: 680 г</p>
-<p style="text-align: center;">Калорийность на 100 гр: 151 ккал</p>
-<p style="text-align: center;">Время готовки: 35 минут</p>
+<table class="dish-info">
+    <thead>
+    <tr><th>Вес</th><th>Калорийность на 100 г</th><th>Время приготовления</th></tr>
+    </thead>
+    <tr><td>680 г</td><td>151 ккал</td><td>35 минут</td></tr>
+</table>
 
 
 <hr/>
@@ -128,9 +150,13 @@
         class="aligncenter size-full wp-image-40"
         src="http://cook-book.byethost5.com/wp-content/uploads/2016/02/IMG_3160-1024.jpg" alt="Рис с курицей карри"
         width="1024" height="683"/></a>
-<p style="text-align: center;">Вес: 645 г</p>
-<p style="text-align: center;">Калорийность на 100 гр: 180 ккал</p>
-<p style="text-align: center;">Время готовки: 30 минут</p>
+<table class="dish-info">
+    <thead>
+    <tr><th>Вес</th><th>Калорийность на 100 г</th><th>Время приготовления</th></tr>
+    </thead>
+    <tr><td>645 г</td><td>180 ккал</td><td>30 минут</td></tr>
+</table>
+
 <p style="text-align: center;">
     <button onclick="location.href='#order-block'">Сделать заказ</button>
 </p>

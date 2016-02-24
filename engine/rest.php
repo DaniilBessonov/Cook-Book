@@ -24,6 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 		'NAME' => $leadData['NAME'],
 		'PHONE_WORK' => $leadData['PHONE'],
 		'COMMENTS' => $leadData['COMMENTS'],
+		'SOURCE_ID' => 'WEB',
 	);
 
 	// append authorization data
