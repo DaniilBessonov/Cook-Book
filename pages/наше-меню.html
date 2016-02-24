@@ -1,0 +1,136 @@
+﻿<article id="order-block"
+         class="nova_menu_item type-nova_menu_item status-publish hentry language-ru nova_menu-vegetarian-menu has-post-thumbnail-prev">
+    <div>
+        <form id="order-form">
+            <h3>Сделать заказ</h3>
+            <input name="DATA[NAME]" type="text" placeholder="Имя*"/>
+            <input id="client-phone" name="DATA[PHONE]" type="text" placeholder="Телефон*"/>
+            <p><div id="person-drop-box">Набор для  <select name="DATA[TITLE]">
+                <option value="1-person">1 человека</option>
+                <option value="2-person"> 2 человек</option>
+                <option value="3-person"> 3 человек</option>
+                <option value="4-person"> 4 человек</option>
+                <option value="6-person"> 6 человек</option>
+            </select></div></p>
+            <textarea name="DATA[COMMENTS]" placeholder="Комментарий"></textarea>
+            <input style="width: auto;" type="submit" value="Сделать заказ"/></form>
+    </div>
+</article>
+<style>
+    #order-block{
+        border: 2px solid #eee;
+        background: #f9f5ed;
+    }
+    #order-block p{
+        margin-bottom: 0;
+    }
+    #order-form{
+        min-width: 300px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    #order-form h3{
+        text-align: center;
+        margin: 10px;
+    }
+    #order-form input, #order-form textarea, #person-drop-box{
+        margin: 5px;
+        width: 100%;
+    }
+    #person-drop-box{
+        border: 2px solid #eee;
+        border-radius: 2px;
+        font-size: 14px;
+        font-size: 1.4rem;
+        padding: .7em;
+        transition: .2s ease-in-out;
+        -webkit-transition: .3s ease-in-out;
+        background-color: white;
+        text-align: left;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+    #person-drop-box select{
+        border: none;
+    }
+</style>
+<p style="display: none;">
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"
+            type="text/javascript"></script>
+    <script>// <![CDATA[
+    $("#order-form").submit(function () {
+        $.ajax({ type: "POST", url: "/engine/rest.php", data: $(this).serialize() }).done(function () {
+            console.log("DONE");
+            alert("Спасибо за Ваш заказ!");
+        });
+        return false;
+    });
+    $(window).load(function () {
+        $("#client-phone").mask("+7 (999) 999-99-99", {placeholder: "_"});
+    });
+    // ]]></script>
+</p>
+<br>
+
+<h2 style="text-align: center;">Гречка с жареными куриными грудками</h2>
+<a href="http://cook-book.byethost5.com/wp-content/uploads/2016/02/IMG_3260-1024.jpg" rel="attachment wp-att-18"><img
+        class="aligncenter size-full wp-image-18"
+        src="http://cook-book.byethost5.com/wp-content/uploads/2016/02/IMG_3260-1024.jpg"
+        alt="Гречка с жареными куриными грудками" width="1024" height="683"/></a>
+<p style="text-align: center;">Вес: 475 г</p>
+<p style="text-align: center;">Калорийность на 100 гр: 214 ккал</p>
+<p style="text-align: center;">Время готовки: 35 минут</p>
+
+
+<hr/>
+
+<h2 style="text-align: center;">Спагетти Карбонара</h2>
+<a href="http://cook-book.byethost5.com/wp-content/uploads/2016/02/IMG_3093-1024.jpg" rel="attachment wp-att-21"><img
+        class="aligncenter size-full wp-image-21"
+        src="http://cook-book.byethost5.com/wp-content/uploads/2016/02/IMG_3093-1024.jpg" alt="Спагетти Карбонара"
+        width="1024" height="665"/></a>
+<p style="text-align: center;">Вес: 425 г</p>
+<p style="text-align: center;">Калорийность на 100 гр: 388 ккал</p>
+<p style="text-align: center;">Время готовки: 35 минут</p>
+
+
+<hr/>
+
+<h2 style="text-align: center;">Картофельное жаркое</h2>
+<a href="http://cook-book.byethost5.com/wp-content/uploads/2016/02/IMG_3339-1024.jpg" rel="attachment wp-att-38"><img
+        class="aligncenter size-full wp-image-38"
+        src="http://cook-book.byethost5.com/wp-content/uploads/2016/02/IMG_3339-1024.jpg" alt="Картофельное жаркое"
+        width="1024" height="683"/></a>
+<p style="text-align: center;">Вес: 700 г</p>
+<p style="text-align: center;">Калорийность на 100 гр: 105 ккал</p>
+<p style="text-align: center;">Время готовки: 40 минут</p>
+
+
+<hr/>
+
+<h2 style="text-align: center;">Картофельное пюре с филе индейки в панировке</h2>
+<a href="http://cook-book.byethost5.com/wp-content/uploads/2016/02/IMG_3358-1024.jpg" rel="attachment wp-att-39"><img
+        class="aligncenter size-full wp-image-39"
+        src="http://cook-book.byethost5.com/wp-content/uploads/2016/02/IMG_3358-1024.jpg"
+        alt="Картофельное пюре с филе индейки в панировке" width="1024" height="683"/></a>
+<p style="text-align: center;">Вес: 680 г</p>
+<p style="text-align: center;">Калорийность на 100 гр: 151 ккал</p>
+<p style="text-align: center;">Время готовки: 35 минут</p>
+
+
+<hr/>
+
+<h2 style="text-align: center;">Рис с курицей карри</h2>
+<a href="http://cook-book.byethost5.com/wp-content/uploads/2016/02/IMG_3160-1024.jpg" rel="attachment wp-att-40"><img
+        class="aligncenter size-full wp-image-40"
+        src="http://cook-book.byethost5.com/wp-content/uploads/2016/02/IMG_3160-1024.jpg" alt="Рис с курицей карри"
+        width="1024" height="683"/></a>
+<p style="text-align: center;">Вес: 645 г</p>
+<p style="text-align: center;">Калорийность на 100 гр: 180 ккал</p>
+<p style="text-align: center;">Время готовки: 30 минут</p>
+<p style="text-align: center;">
+    <button onclick="location.href='#order-block'">Сделать заказ</button>
+</p>
