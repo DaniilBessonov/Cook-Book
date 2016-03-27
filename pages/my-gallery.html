@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+</head>
+<body>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script>
+    var imgs = ["http://i1.imgbb.ru/img6/5/d/4/5d44921cbfa72172e6cdd6b45506e9d2.jpg",
+        "http://files8.adme.ru/files/news/part_48/481205/7453355-R3L8T8D-600-800_3_three_little_pigs.jpg",
+        "http://www.kulturologia.ru/files/u12645/ida-frosk-2.jpg"];
+    $(document).ready(function () {
+        $(".mini-img").mouseover(function () {
+            var id = parseInt($(this).attr("attr-id"));
+            var loadId = parseInt($("#gallery-img").attr("attr-id"));
+            if (loadId != id) {
+                var html = '<img id="gallery-img" attr-id="'+id+'" src="' + imgs[id] + '">';
+                $("#gallery-container").children().remove();
+                $("#gallery-container").append(html);
+            }
+        });
+    });
+</script>
+<style>
+    .mini-img {
+        width: 200px;
+        height: auto;
+    }
+    #gallery-img{
+        width: 500px;
+        height: auto;
+    }
+    .table, tr, td {
+        border-color: #000000;
+        border-style: dashed;
+        border-width: 1px;
+    }
+    .table tr td:first-child {
+        width: 30%;
+    }
+</style>
+<table class="table">
+    <tbody>
+    <tr>
+        <td>
+            <script>
+                for (var i = 0; i < imgs.length; i++) {
+                    var html = '<img class="mini-img" attr-id="' + i + '" src="' + imgs[i] + '">';
+                    document.write(html);
+                }
+            </script>
+        </td>
+        <td id="gallery-container"></td>
+    </tr>
+    <tr>
+        <td>Jacob</td>
+        <td>Thornton</td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
